@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CalcBox — Décalage horaire, conversion d'unités, TVA, prêt : calculateurs gratuits en ligne</title>
+<meta name="description" content="Combien d'heures de décalage entre Paris et Tokyo ? Combien de livres fait 1 kg ? Calculez instantanément : fuseaux horaires, unités, IMC, pourcentages, prêt, TVA, pourboire, âge, dates, intérêts composés. Gratuit, sans compte, sans pub intrusive." />
+<meta name="keywords" content="décalage horaire Paris Tokyo, différence horaire, convertisseur unités, calculateur TVA, calculateur IMC, calculateur pourcentage, calculateur de prêt, différence entre deux dates, fuseau horaire, calculateur en ligne gratuit" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.calcbox.example/" />
+<meta name="theme-color" content="#101B1D" />
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CalcBox" />
+<meta property="og:title" content="CalcBox — Décalage horaire, conversion d'unités, TVA, prêt : calculateurs gratuits" />
+<meta property="og:description" content="Dix calculateurs gratuits et instantanés : fuseaux horaires, unités, IMC, pourcentages, prêt, TVA, pourboire, âge, dates, intérêts composés. Sans compte, sans donnée envoyée." />
+<meta property="og:url" content="https://www.calcbox.example/" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CalcBox — Calculateurs gratuits en ligne" />
+<meta name="twitter:description" content="Décalage horaire, conversion d'unités, TVA, prêt, IMC, pourcentages… instantané et gratuit." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Données structurées : aide Google à comprendre le site et à afficher des extraits enrichis -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CalcBox",
+  "url": "https://www.calcbox.example/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "description": "Dix calculateurs et convertisseurs gratuits exécutés dans le navigateur : fuseaux horaires, unités, IMC, pourcentages, prêt, TVA, pourboire, âge, dates, intérêts composés.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien d'heures de décalage entre Paris et Tokyo ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tokyo n'applique pas l'heure d'été : le décalage est de 8 heures en hiver (heure de Paris) et de 7 heures en été, Tokyo étant toujours en avance sur Paris." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'heures de décalage entre Paris et New York ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paris et New York observent toutes deux l'heure d'été à des dates proches, le décalage reste donc généralement de 6 heures, Paris étant en avance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment convertir des kilogrammes en livres ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "1 kilogramme équivaut à environ 2,20462 livres (lb). Multipliez le nombre de kilogrammes par 2,20462 pour obtenir le résultat en livres." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment calculer un pourcentage d'un nombre ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour calculer X% d'un nombre, multipliez le nombre par X puis divisez par 100. Par exemple, 20% de 150 = (150 × 20) / 100 = 30." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment calculer la TVA sur un prix hors taxe ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prix TTC = Prix HT × (1 + taux de TVA / 100). En France, le taux normal est de 20%, donc un prix HT de 100€ devient 120€ TTC." }
+    }
+  ]
+}
+</script>
+
+<!--
+  MONÉTISATION — Google AdSense
+  Remplace "ca-pub-0000000000000000" par ton propre identifiant éditeur AdSense
+  (disponible dans ton compte AdSense une fois approuvé). Sans cette étape,
+  le script ne charge aucune publicité — il ne casse rien, il reste inactif.
+-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="logo"><span class="led" aria-hidden="true"></span>CalcBox</div>
+    <span class="tagline">10 instruments · 0 compte · 0 donnée envoyée</span>
+    <a class="support-link" href="https://ko-fi.com/VOTRE-PSEUDO" target="_blank" rel="noopener">☕ Soutenir CalcBox</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Convertisseurs & calculateurs</p>
+    <h1>Posez le calcul, obtenez le résultat. Rien de plus.</h1>
+    <p class="lead">Dix instruments de calcul précis, exécutés entièrement dans votre navigateur. Aucune donnée envoyée, aucun compte requis.</p>
+
+    <div class="quickcalc">
+      <div class="qc-label">
+        <span>Calcul rapide</span>
+        <span>essayez « 15% de 240 »</span>
+      </div>
+      <input type="text" id="qc-input" placeholder="12 * 3.5, ou 20% de 89…" autocomplete="off" spellcheck="false" />
+      <div class="qc-divider"></div>
+      <div class="qc-readout idle" id="qc-readout">En attente de saisie…</div>
+      <p class="qc-hint">Pour un calcul dédié — prêt, TVA, âge, dates — choisissez un instrument ci-dessous.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Emplacement publicitaire — remplace le client/slot AdSense dans <head> et ci-dessous -->
+<div class="ad-slot wrap">
+  <span class="ad-slot-label">Publicité</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="0000000000"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<nav class="tool-index" aria-label="Liste des calculateurs">
+  <div class="wrap">
+    <h2>Instruments disponibles</h2>
+    <div class="panel-grid">
+      <a href="#unit" class="panel-card"><span class="mono-tag">UNIT</span><span class="t">Convertisseur d'unités</span><span class="d">Longueur, poids, volume, température</span></a>
+      <a href="#bmi" class="panel-card"><span class="mono-tag">IMC</span><span class="t">Calculateur d'IMC</span><span class="d">Indice de masse corporelle</span></a>
+      <a href="#pct" class="panel-card"><span class="mono-tag">PCT</span><span class="t">Pourcentages</span><span class="d">Proportion et variation</span></a>
+      <a href="#loan" class="panel-card"><span class="mono-tag">LOAN</span><span class="t">Calculateur de prêt</span><span class="d">Mensualités et coût total</span></a>
+      <a href="#age" class="panel-card"><span class="mono-tag">AGE</span><span class="t">Calculateur d'âge</span><span class="d">Depuis une date de naissance</span></a>
+      <a href="#vat" class="panel-card"><span class="mono-tag">TVA</span><span class="t">Calculateur de TVA</span><span class="d">HT ↔ TTC</span></a>
+      <a href="#tip" class="panel-card"><span class="mono-tag">TIP</span><span class="t">Pourboire & addition</span><span class="d">Partage entre convives</span></a>
+      <a href="#diff" class="panel-card"><span class="mono-tag">DIFF</span><span class="t">Différence entre deux dates</span><span class="d">Jours, semaines, années</span></a>
+      <a href="#tz" class="panel-card"><span class="mono-tag">TZ</span><span class="t">Fuseaux horaires</span><span class="d">Heure dans le monde</span></a>
+      <a href="#cmp" class="panel-card"><span class="mono-tag">CMP</span><span class="t">Intérêts composés</span><span class="d">Simulation d'épargne</span></a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- UNIT -->
+  <section class="tool" id="unit">
+    <div class="tool-head"><span class="mono-tag">UNIT</span><h3>Convertisseur d'unités</h3></div>
+    <p class="desc">Convertit longueur, poids, volume ou température entre unités courantes.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field">
+          <label for="unit-type">Type</label>
+          <select id="unit-type" onchange="populateUnitSelects()">
+            <option value="length">Longueur</option>
+            <option value="weight">Poids</option>
+            <option value="volume">Volume</option>
+            <option value="temp">Température</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="unit-value">Valeur</label>
+          <input type="number" id="unit-value" value="1" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="unit-from">De</label>
+          <select id="unit-from"></select>
+        </div>
+        <div class="field">
+          <label for="unit-to">Vers</label>
+          <select id="unit-to"></select>
+        </div>
+      </div>
+      <div class="actions"><button onclick="unitConvert()">Convertir</button></div>
+      <div class="output"><div class="readout empty" id="unit-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur la conversion d'unités</summary>
+      <p><strong>Combien de livres fait 1 kilogramme ?</strong> 1 kg ≈ 2,20462 lb.</p>
+      <p><strong>Combien de kilomètres fait 1 mile ?</strong> 1 mile ≈ 1,60934 km.</p>
+      <p><strong>Combien de litres fait 1 gallon (US) ?</strong> 1 gal ≈ 3,78541 l.</p>
+    </details>
+  </section>
+
+  <!-- IMC -->
+  <section class="tool" id="bmi">
+    <div class="tool-head"><span class="mono-tag">IMC</span><h3>Calculateur d'IMC</h3></div>
+    <p class="desc">Calcule l'indice de masse corporelle et sa catégorie.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="bmi-weight">Poids (kg)</label><input type="number" id="bmi-weight" placeholder="70" /></div>
+        <div class="field"><label for="bmi-height">Taille (cm)</label><input type="number" id="bmi-height" placeholder="175" /></div>
+      </div>
+      <div class="actions"><button onclick="bmiCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="bmi-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur l'IMC</summary>
+      <p><strong>Quel est le calcul de l'IMC ?</strong> IMC = poids (kg) ÷ (taille (m) × taille (m)).</p>
+      <p><strong>Quel IMC est considéré comme normal ?</strong> Entre 18,5 et 25 selon la classification de l'OMS.</p>
+    </details>
+  </section>
+
+  <!-- PCT -->
+  <section class="tool" id="pct">
+    <div class="tool-head"><span class="mono-tag">PCT</span><h3>Pourcentages</h3></div>
+    <p class="desc">Calcule un pourcentage d'un total, ou la variation entre deux valeurs.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="pct-a">Pourcentage (%)</label><input type="number" id="pct-a" placeholder="20" /></div>
+        <div class="field"><label for="pct-b">Sur le total</label><input type="number" id="pct-b" placeholder="150" /></div>
+      </div>
+      <div class="actions"><button onclick="pctOf()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="pct-out-1">—</div></div>
+      <div class="row" style="margin-top:1.2rem">
+        <div class="field"><label for="pct-c">Valeur de départ</label><input type="number" id="pct-c" placeholder="80" /></div>
+        <div class="field"><label for="pct-d">Valeur d'arrivée</label><input type="number" id="pct-d" placeholder="100" /></div>
+      </div>
+      <div class="actions"><button onclick="pctVariation()">Calculer la variation</button></div>
+      <div class="output"><div class="readout empty" id="pct-out-2">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur les pourcentages</summary>
+      <p><strong>Comment calculer X% d'un nombre ?</strong> Multipliez le nombre par X, puis divisez par 100. Exemple : 20% de 150 = 30.</p>
+      <p><strong>Comment calculer une variation en pourcentage ?</strong> ((valeur d'arrivée − valeur de départ) ÷ valeur de départ) × 100.</p>
+    </details>
+  </section>
+
+  <!-- LOAN -->
+  <section class="tool" id="loan">
+    <div class="tool-head"><span class="mono-tag">LOAN</span><h3>Calculateur de prêt</h3></div>
+    <p class="desc">Estime la mensualité et le coût total d'un prêt à taux fixe.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="loan-amount">Montant emprunté</label><input type="number" id="loan-amount" placeholder="200000" /></div>
+        <div class="field"><label for="loan-rate">Taux annuel (%)</label><input type="number" id="loan-rate" placeholder="3.5" step="0.01" /></div>
+        <div class="field"><label for="loan-years">Durée (années)</label><input type="number" id="loan-years" placeholder="20" /></div>
+      </div>
+      <div class="actions"><button onclick="loanCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="loan-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur le calcul de prêt</summary>
+      <p><strong>Comment calculer une mensualité de prêt ?</strong> Mensualité = capital × taux mensuel ÷ (1 − (1 + taux mensuel)^−nombre de mois).</p>
+    </details>
+  </section>
+
+  <!-- AGE -->
+  <section class="tool" id="age">
+    <div class="tool-head"><span class="mono-tag">AGE</span><h3>Calculateur d'âge</h3></div>
+    <p class="desc">Calcule un âge précis en années, mois et jours.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="age-birth">Date de naissance</label><input type="date" id="age-birth" /></div>
+      </div>
+      <div class="actions"><button onclick="ageCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="age-out">—</div></div>
+    </div>
+  </section>
+
+  <!-- Emplacement publicitaire mi-page -->
+  <div class="ad-slot">
+    <span class="ad-slot-label">Publicité</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-0000000000000000"
+         data-ad-slot="0000000001"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- TVA -->
+  <section class="tool" id="vat">
+    <div class="tool-head"><span class="mono-tag">TVA</span><h3>Calculateur de TVA</h3></div>
+    <p class="desc">Passe d'un prix hors taxe à toutes taxes comprises, et inversement.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="vat-amount">Montant</label><input type="number" id="vat-amount" placeholder="100" /></div>
+        <div class="field"><label for="vat-rate">Taux TVA (%)</label><input type="number" id="vat-rate" value="20" /></div>
+        <div class="field">
+          <label for="vat-direction">Sens</label>
+          <select id="vat-direction">
+            <option value="ht-ttc">HT → TTC</option>
+            <option value="ttc-ht">TTC → HT</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions"><button onclick="vatCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="vat-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur la TVA</summary>
+      <p><strong>Comment passer du HT au TTC ?</strong> Prix TTC = Prix HT × (1 + taux ÷ 100). Avec 20% : 100€ HT → 120€ TTC.</p>
+      <p><strong>Comment retrouver le HT à partir du TTC ?</strong> Prix HT = Prix TTC ÷ (1 + taux ÷ 100).</p>
+    </details>
+  </section>
+
+  <!-- TIP -->
+  <section class="tool" id="tip">
+    <div class="tool-head"><span class="mono-tag">TIP</span><h3>Pourboire & partage d'addition</h3></div>
+    <p class="desc">Calcule le pourboire et répartit le total entre convives.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="tip-bill">Montant de l'addition</label><input type="number" id="tip-bill" placeholder="48" /></div>
+        <div class="field"><label for="tip-pct">Pourboire (%)</label><input type="number" id="tip-pct" value="10" /></div>
+        <div class="field"><label for="tip-people">Nombre de personnes</label><input type="number" id="tip-people" value="2" min="1" /></div>
+      </div>
+      <div class="actions"><button onclick="tipCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="tip-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur le pourboire</summary>
+      <p><strong>Quel pourboire laisser au restaurant ?</strong> Il n'y a pas de règle fixe en France (le service est inclus) — 5 à 10% est un usage courant pour récompenser un bon service.</p>
+    </details>
+  </section>
+
+  <!-- DIFF -->
+  <section class="tool" id="diff">
+    <div class="tool-head"><span class="mono-tag">DIFF</span><h3>Différence entre deux dates</h3></div>
+    <p class="desc">Compte les jours, semaines et années entre deux dates.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="diff-start">Date de début</label><input type="date" id="diff-start" /></div>
+        <div class="field"><label for="diff-end">Date de fin</label><input type="date" id="diff-end" /></div>
+      </div>
+      <div class="actions"><button onclick="dateDiffCompute()">Calculer</button></div>
+      <div class="output"><div class="readout empty" id="diff-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur les différences de dates</summary>
+      <p><strong>Comment calculer le nombre de jours entre deux dates ?</strong> Soustrayez la date de début à la date de fin — l'outil ci-dessus le fait automatiquement, jours, semaines et années comprises.</p>
+    </details>
+  </section>
+
+  <!-- TZ -->
+  <section class="tool" id="tz">
+    <div class="tool-head"><span class="mono-tag">TZ</span><h3>Fuseaux horaires</h3></div>
+    <p class="desc">Affiche l'heure correspondante dans plusieurs villes du monde.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="tz-zone">Ville de référence (repère visuel)</label><select id="tz-zone"></select></div>
+        <div class="field"><label for="tz-time">Date/heure locale</label><input type="datetime-local" id="tz-time" /></div>
+      </div>
+      <div class="actions">
+        <button onclick="tzCompute()">Convertir</button>
+        <button class="secondary" onclick="tzNow()">Maintenant</button>
+      </div>
+      <div class="output"><div class="readout empty" id="tz-out" style="min-height:220px">—</div></div>
+    </div>
+
+    <div class="static-note">
+      <h4>Décalages horaires courants par rapport à Paris</h4>
+      <p class="desc">Les décalages varient selon l'heure d'été/hiver : la plupart des pays européens et les États-Unis appliquent l'heure d'été, mais pas tous aux mêmes dates, ni certains pays comme le Japon ou la Chine qui n'appliquent pas l'heure d'été du tout.</p>
+      <div class="tz-table">
+        <div class="tz-row tz-row-head"><span>Ville</span><span>Hiver</span><span>Été</span></div>
+        <div class="tz-row"><span>Tokyo, Japon</span><span>+8h</span><span>+7h</span></div>
+        <div class="tz-row"><span>New York, États-Unis</span><span>−6h</span><span>−6h</span></div>
+        <div class="tz-row"><span>Los Angeles, États-Unis</span><span>−9h</span><span>−9h</span></div>
+        <div class="tz-row"><span>Londres, Royaume-Uni</span><span>−1h</span><span>−1h</span></div>
+        <div class="tz-row"><span>Dubaï, Émirats arabes unis</span><span>+3h</span><span>+2h</span></div>
+        <div class="tz-row"><span>Shanghai, Chine</span><span>+7h</span><span>+6h</span></div>
+        <div class="tz-row"><span>Mumbai, Inde</span><span>+4h30</span><span>+3h30</span></div>
+        <div class="tz-row"><span>São Paulo, Brésil</span><span>−4h</span><span>−5h</span></div>
+        <div class="tz-row"><span>Sydney, Australie</span><span>+8h à +10h*</span><span>+8h à +10h*</span></div>
+      </div>
+      <p class="tz-footnote">* L'Australie est dans l'hémisphère sud : son heure d'été a lieu pendant l'hiver européen, ce qui inverse le sens de la variation. Utilisez l'outil ci-dessus pour une conversion exacte à une date donnée.</p>
+    </div>
+
+    <details class="faq">
+      <summary>Questions fréquentes sur les fuseaux horaires</summary>
+      <p><strong>Combien d'heures de décalage entre Paris et Tokyo ?</strong> 8 heures en hiver, 7 heures en été (Tokyo n'a pas d'heure d'été) — Tokyo est toujours en avance.</p>
+      <p><strong>Combien d'heures de décalage entre Paris et New York ?</strong> 6 heures en général, Paris étant en avance.</p>
+      <p><strong>Pourquoi le décalage change-t-il selon la saison ?</strong> Parce que certains pays avancent ou reculent leur horloge d'une heure (heure d'été / heure d'hiver) et pas aux mêmes dates que la France.</p>
+    </details>
+  </section>
+
+  <!-- CMP -->
+  <section class="tool" id="cmp">
+    <div class="tool-head"><span class="mono-tag">CMP</span><h3>Intérêts composés</h3></div>
+    <p class="desc">Simule la croissance d'une épargne avec versements mensuels et taux annuel.</p>
+    <div class="panel">
+      <div class="row">
+        <div class="field"><label for="cmp-principal">Capital initial</label><input type="number" id="cmp-principal" placeholder="1000" /></div>
+        <div class="field"><label for="cmp-monthly">Versement mensuel</label><input type="number" id="cmp-monthly" placeholder="100" /></div>
+        <div class="field"><label for="cmp-rate">Taux annuel (%)</label><input type="number" id="cmp-rate" placeholder="5" step="0.01" /></div>
+        <div class="field"><label for="cmp-years">Durée (années)</label><input type="number" id="cmp-years" placeholder="10" /></div>
+      </div>
+      <div class="actions"><button onclick="compoundCompute()">Simuler</button></div>
+      <div class="output"><div class="readout empty" id="cmp-out">—</div></div>
+    </div>
+    <details class="faq">
+      <summary>Questions fréquentes sur les intérêts composés</summary>
+      <p><strong>C'est quoi les intérêts composés ?</strong> Les intérêts d'une période sont réinvestis et génèrent eux-mêmes des intérêts la période suivante — la croissance s'accélère avec le temps.</p>
+    </details>
+  </section>
+
+</main>
+
+<!-- Emplacement publicitaire bas de page -->
+<div class="ad-slot wrap">
+  <span class="ad-slot-label">Publicité</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="0000000002"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <span>CalcBox — tous les calculs s'exécutent dans votre navigateur, aucune donnée n'est envoyée à un serveur.</span>
+      <span><a href="https://ko-fi.com/VOTRE-PSEUDO" target="_blank" rel="noopener">☕ Soutenir CalcBox</a> · [Nom du site] · [Contact]</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
